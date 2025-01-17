@@ -287,7 +287,7 @@ main > section{
     .team_img_container, .facts_container, .sponsor_company{
         grid-template-columns: repeat(1, 1fr);
     }
-    .our_features{
+    .our_features, .footer_sec p{
         margin-left: 20px;
         margin-right: 10px;
 
