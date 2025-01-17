@@ -11,8 +11,12 @@
 /* shared styles start */
 .display_flex{
     display: flex;
+    
 }
 
+.text_primary{
+    color: #FF900E;
+}
 /* dark 02 */
 .text_gray{
     color: #424242;
@@ -37,7 +41,18 @@
 
 }
 
+main{
+    max-width: 1440px;
+    margin: 0 auto;
+}
 
+main > section{
+    margin-top: 130px;
+}
+.section_title{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
 
 /* shared styles end */
 
@@ -104,13 +119,109 @@
 /* banner styles end */
 
 
+
+/* team and feature styles start */
+
+.teams{
+    align-items: center;
+}
+
+.team_img_container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.our_features{
+    margin-left: 130px;
+    max-width: 530px;
+}
+.section_title{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+#quick_list{
+    font-weight: 500;
+}
+
+
+
+/* team and feature styles end */
+
+
+
+/* some facts related styles start */
+
+.facts_container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 70px;
+}
+
+.fact_card{
+    border: 1px solid #FF900E;
+    width: 240px;
+    height: 240px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.fact_number{
+    font-size: 2.8rem;
+    font-weight:600;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.fact_name{
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.fact_discription{
+    max-width: 540px;
+    
+}
+
+/* some facts related styles end */
+
+
 /* ____________________________________________Responsive media query_______________________________________________ */
 
 /* responsive for mobile/small device start*/
 @media screen and (max-width:576px) {
-    .navbar, .nav_links{
+    .navbar, .nav_links, .teams{
         flex-direction: column;
+    }
+    .team_img_container, .facts_container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .our_features{
+        margin-left: 20px;
+        margin-right: 10px;
+
+    }
+    .facts_container{
+        justify-items: center;
+        gap: 24px;
+    }
+    .fact_discription, .section_title{
+        margin-left: 15px;
     }
 }
 
 /* responsive for mobile/small device  end*/
+
+
+
+/* responsive for tab/medium device  start*/
+@media screen and (min-width:576px) and (max-width:992px) {
+    .teams{
+        flex-direction: column;
+    }
+    
+}
+
+/* responsive for ab/medium device  end*/
